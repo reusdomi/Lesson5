@@ -19,3 +19,13 @@
 1. Erstellen Sie dann einen **Backend** Workflow, der das Backend in gleicher Weise baut und testet: 
 	1. Herunterladen des Repository Inhalts, Initialisierung von Python und Erstellen des dist Ordners.
 	1. Kopieren der Datei `src/backend/run.py`. Dabei Einfügen einer Kommentarzeile (`#`) mit Zeitpunkt des Build. Abschließend Ausführen von `python dist/run.py` zum Test.
+
+
+## Übung 3: Erstellen eines Bundles
+
+1. Erweitern Sie den Frontend und Backend Workflow, dass Sie:
+	1. Den `dist` Ordner als Artefakt hochladen und bereitstellen.
+1. Erstellen Sie dann einen Bundle Workflow, der: 
+	1. Einen Ordner `dist` erstellt und beide Artefakte in die Ordner `dist/frontend` und `dist/backend` herunterlädt.
+	1. Eine Datei `creation.txt` erstellt, die den Zeitpunkt der Bundle-Erstellung dokumentiert und sie zusammen mit dem `dist` Ordner in ein Archiv `bundle.zip` sichert.
+	1. Den Inhalt des Repository in den Ordner `repo` herunterlädt, die Datei `bundle.zip` dorthin verschiebt und sie mittels **git** in das Repository pushed. Dabei wird die ID (SHA) des Auslösers in der Commit-Message verwendet.
