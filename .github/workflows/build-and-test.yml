@@ -1,0 +1,15 @@
+name: Build and Test
+on: [push]
+
+jobs:
+
+  frontend:
+    name: Build and run frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v2
+
+      - name: Print app.js
+        run: cat src/frontend/app.js
