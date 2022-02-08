@@ -16,7 +16,8 @@ jobs:
 
       - name: Initialise Node.js
         uses: actions/setup-node@v2
-        run: npm install
+	with:
+	  node-version: '14'
 
       - name: Run frontend
         run: node src/frontend/app.js
